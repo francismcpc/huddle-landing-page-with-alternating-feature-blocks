@@ -1,0 +1,134 @@
+@use "./variables" as v;
+
+.footer {
+  padding: 150px 0px 60px;
+  background: rgb(0, 37, 46);
+  color: rgb(255, 255, 255);
+
+  &__container {
+    margin: 0px auto;
+    padding: 0px 60px;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+
+    > img {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+
+  &__links {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+
+    > ul {
+      margin: 40px 0px 0px;
+      list-style: none;
+      width: 100%;
+      max-width: 300px;
+
+      > li {
+        margin: 0px 0px 20px;
+        display: flex;
+        align-items: flex-start;
+
+        > a {
+          text-decoration: none;
+          color: rgb(255, 255, 255);
+          border-bottom: 1px solid transparent;
+          transition: all 0.3s ease-in-out 0s;
+
+          &:hover {
+            color: v.$pink;
+          }
+        }
+
+        > img {
+          margin: 5px 20px 0px 0px;
+          width: 20px;
+        }
+
+        > p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  &__socials {
+    > ul {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+
+      > li {
+        list-style: none;
+
+        > a {
+          margin: 0px 10px 0px 0px;
+          padding: 0px;
+          height: 40px;
+          width: 40px;
+          display: inline-flex;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+          color: rgb(255, 255, 255);
+          border: 1px solid rgb(255, 255, 255);
+          border-radius: 50%;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out 0s;
+
+          &:hover {
+            background-color: v.$pink;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    align-self: flex-end;
+  }
+
+  &__attribution {
+    > a {
+      color: v.$pink;
+    }
+  }
+}
+
+@media (max-width: v.$breakpoint-md) {
+  .footer__links {
+    flex-direction: column;
+  }
+
+  .footer__socials {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .footer__copyright {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer__attribution {
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: v.$breakpoint-sm) {
+  .footer__container {
+    padding: 0 20px;
+  }
+}
